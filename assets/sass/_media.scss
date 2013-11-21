@@ -24,7 +24,7 @@
     }
   }
   
-  // Make that header image bigger Chuck
+  // Make that header image even moooar taller Chuck
   .index__header {
     height: 35%;
   }
@@ -66,9 +66,9 @@ and (min-width : 569px) {
       }
     }
   
-  // Make that header image bigger Chuck
+  // Make that header image taller Chuck
   .index__header {
-    height: 26.5%;
+    height: 28%;
   }
   
   // Add some moar padding to the bottom
@@ -84,12 +84,31 @@ and (min-width : 569px) {
   }
   .pagination {
     margin: 0px auto;
+    padding: 0;
     
     a.older-posts, a.newer-posts {
       position: static;
       display: inline-block;
       margin: 0 -2px;
       width: 50%;
+      padding: 4%;
+      box-sizing: border-box;
+      &:hover, &:active, &:focus {
+        background-color: $pure;
+        color: inherit;
+      }
     }
+    .older-posts {
+      right: 0;
+    }
+    .newer-posts {
+      left: 0;
+    }
+  }
+  
+  // Fancy phone footer scroll
+  .post__share {
+    width: 120%;
+    max-width: 524px;
   }
 }

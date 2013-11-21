@@ -47,15 +47,38 @@
 }
 
 // Wanna share a post? Well..to bad!! This is just to style da links.
+#loose {
+  overflow: auto;
+  @include grow;
+}
 .post__share {
   background: $black;
   padding: 1.5rem 4.5%;
-  @include grow;
   
   h4 {
     color: $white;
+    display: inline-block;
   }
   a {
     color: $blue;
+  }
+  
+  // Footer stuffs
+  .default__footer {
+    text-align: right;
+    float: right;
+    margin-top: -1.7em;
+    padding: 0; 
+    
+    a, span {
+      font-size: .75rem;
+      color: $grey;
+    }
+    a {
+      border-bottom: 1px solid rgba($lightgrey, .8);
+      &:hover, &:active, &:focus {
+        color: $blue;
+      }
+    }
   }
 }
