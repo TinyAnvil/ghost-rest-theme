@@ -1,0 +1,22 @@
+// Its max width bro 
+@mixin max-width {
+  max-width: 800px;
+  margin: 0px auto;
+  display: block;
+}
+
+// Grow beyond the limits to reach max width!
+// I have a 4% padding on the post.hbs page but I want some stuff
+// To be full width so this takes care of that
+@mixin grow {
+  width: 109%;
+  margin-left: -4.5%;
+  box-sizing: border-box;
+}
+
+// Hides stuff
+@mixin hide {
+		text-indent: -9999px;
+		visibility: hidden;
+		display: none;
+}

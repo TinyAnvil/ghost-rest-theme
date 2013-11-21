@@ -1,0 +1,61 @@
+// The Ghost generated body class for the whole post page
+.post-template {
+  padding: 4%;
+  padding-bottom: 0;
+  @include max-width;
+}
+
+// The blog name wrapper
+.post__header {
+  border-bottom: 1px solid $lightgrey;
+  &:hover, &:active, &:focus {
+      color: $blue;
+  }
+}
+
+// The post date and tags
+.post__meta {
+  
+}
+
+// The post title.. duh
+.post__title {
+  background: $red no-repeat center center;
+  background-size: cover;
+  font-weight: 100;
+  line-height: 1.2em;
+  margin: .5em 0;
+  color: $pure;
+  @include grow;
+  padding: 4.5%;
+  text-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+
+// Mhmm.. yup.. the post content
+.post__content {
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: -.5rem;
+  }
+  img {
+    @include grow;
+  }
+  a, em, strong, li, mark {
+    font-family: 'Lustria', serif;
+  }
+}
+
+// Wanna share a post? Well..to bad!! This is just to style da links.
+.post__share {
+  background: $black;
+  padding: 1.5rem 4.5%;
+  @include grow;
+  
+  h4 {
+    color: $white;
+  }
+  a {
+    color: $blue;
+  }
+}

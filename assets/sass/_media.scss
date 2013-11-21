@@ -1,0 +1,95 @@
+//Media Queries - 800px
+@media only screen and (min-width: 800px) {
+  p, li, code, a, .page-number {
+    font-size: 1.35rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2, blockquote p {
+    font-size: 2rem;
+  }
+  h3, h4 {
+    font-size: 1.65rem;
+  }
+  
+  // The links on the index page
+  .index__link {
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  // Make that header image bigger Chuck
+  .index__header {
+    height: 35%;
+  }
+  
+  // Add some moar padding to the bottom
+  .post__content {
+    padding-bottom: 6%;
+  }
+}
+
+//Media Queries - 600px
+@media only screen 
+and (max-width : 799px)
+and (min-width : 569px) {
+  p, li, code, a, .page-number {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  blockquote p {
+    font-size: 1.6rem;
+  }
+  h3, h4 {
+    font-size: 1.4rem;
+  }
+  
+  // The links on the index page
+    .index__link {
+    
+      h2 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  
+  // Make that header image bigger Chuck
+  .index__header {
+    height: 26.5%;
+  }
+  
+  // Add some moar padding to the bottom
+  .post__content {
+    padding-bottom: 4%;
+  }
+}
+
+// 500px
+@media only screen and (max-width: 568px) {
+  .page-number {
+    @include hide;
+  }
+  .pagination {
+    margin: 0px auto;
+    
+    a.older-posts, a.newer-posts {
+      position: static;
+      display: inline-block;
+      margin: 0 -2px;
+      width: 50%;
+    }
+  }
+}
