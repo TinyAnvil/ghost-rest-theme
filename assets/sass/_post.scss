@@ -5,6 +5,11 @@
   @include max-width;
 }
 
+// The post wrapper.. but this one has everything.. including the footer
+.post__main {
+  
+}
+
 // The blog name wrapper
 .post__header {
   border-bottom: 1px solid $lightgrey;
@@ -13,15 +18,11 @@
   }
 }
 
-// The post date and tags
-.post__meta {
-  
-}
-
 // The post title.. duh
 .post__title {
-  background: $red no-repeat center center;
+  background: $red no-repeat center bottom;
   background-size: cover;
+  image-rendering: optimizeSpeed;
   font-weight: 100;
   line-height: 1.2em;
   margin: .5em 0;
@@ -33,7 +34,7 @@
 
 // Mhmm.. yup.. the post content
 .post__content {
-
+  
   h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: -.5rem;
@@ -47,13 +48,16 @@
 }
 
 // Wanna share a post? Well..to bad!! This is just to style da links.
-#loose {
+.post__footer {
+  position: absolute;
+  bottom: 0;
   overflow: auto;
   @include grow;
 }
-.post__share {
-  background: $black;
+  
+.post__footer__inner {
   padding: 1.5rem 4.5%;
+  background-color: $black;
   
   h4 {
     color: $white;
@@ -64,20 +68,29 @@
   }
   
   // Footer stuffs
-  .default__footer {
+  .footer {
     text-align: right;
     float: right;
-    margin-top: -1.7em;
-    padding: 0; 
+    margin-top: -1.9em;
+    padding: 0;
     
-    a, span {
-      font-size: .75rem;
-      color: $grey;
-    }
-    a {
-      border-bottom: 1px solid rgba($lightgrey, .8);
-      &:hover, &:active, &:focus {
-        color: $blue;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    
+    #footer__wrap {
+      display: inherit;
+      
+      a, span {
+        font-size: .75rem;
+        color: $grey;
+      }
+      a {
+        border-bottom: 1px solid rgba($lightgrey, .8);
+        &:hover, &:active, &:focus {
+          color: $blue;
+        }
       }
     }
   }

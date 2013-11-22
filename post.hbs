@@ -7,10 +7,10 @@
   
   {{#post}}
     <article class="{{post_class}}">
-      <span class="post__meta">
+      <div class="post__meta">
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> 
         {{#if tags}}in {{tags separator=" | "}}{{/if}}
-      </span>
+      </div>
       
       <h1 class="post__title" {{#if author}}style="background-image: url({{author.cover}})"{{/if}}>{{{title}}}</h1>
       
@@ -18,9 +18,8 @@
         {{content}}
       </section>
       
-      
-      <div id="loose">
-        <section class="post__share">
+      <div class="post__footer">
+        <section class="post__footer__inner">
           <h4>Share</h4>
           <br />
           <a href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"

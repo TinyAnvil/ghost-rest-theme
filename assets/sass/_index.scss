@@ -1,19 +1,38 @@
+// All the article guts are in here.. everything but the footer
+.index__main {
+  padding-bottom: 6em;
+}
+
 // The index header
 .index__header {
   background: $blue no-repeat center bottom;
   background-size: cover;
-  position: relative;
+  image-rendering: optimizeSpeed;
+  text-align: center;
   display: table;
   width: 100%;
-  height: 22%;
-  text-align: center;
   
-  h1 {
+  padding: 8% 0;
+  
+  #index__meta {
     display: table-cell;
     vertical-align: middle;
-    font-weight: 100;
-    color: $pure;
-    text-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    
+    h1 {
+      font-weight: 100;
+      color: $pure;
+      text-shadow: 0px 1px 2px rgba(0,0,0,.2);
+      line-height: 1;
+      margin-bottom: .2em;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: .8em;
+      color: rgba($pure, .5);
+      text-shadow: 0px 2px 2px rgba(0,0,0,.1);
+      line-height: 1;
+      padding-bottom: .5em;
+    }
   }
 }
 
@@ -61,21 +80,30 @@
 }
 
 // Footer stuffs
-.default__footer {
+.footer {
   text-align: center;
-  padding: 4% 0; 
+  height: 6em;
+  position: absolute;
+  bottom: 0;
+  display: table;
+  width: 100%;
   
-  a, span {
-    font-size: .75rem;
-    color: rgba($grey, .7);
-  }
-  a {
-    border-bottom: 1px solid $lightgrey;
-    &:hover, &:active, &:focus {
-      color: $blue;
+  #footer__wrap {
+    display: table-cell;
+    vertical-align: middle;
+  
+    a, span {
+      font-size: .75rem;
+      color: rgba($grey, .7);
     }
-  }
-  span {
-    display: block;
+    a {
+      border-bottom: 1px solid $lightgrey;
+      &:hover, &:active, &:focus {
+        color: $blue;
+      }
+    }
+    span {
+      display: block;
+    }
   }
 }

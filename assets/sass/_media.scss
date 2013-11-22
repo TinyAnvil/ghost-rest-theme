@@ -1,4 +1,4 @@
-//Media Queries - 800px
+// Big screens, for old fogies
 @media only screen and (min-width: 800px) {
   p, li, code, a, .page-number {
     font-size: 1.35rem;
@@ -15,7 +15,7 @@
   
   // The links on the index page
   .index__link {
-  
+    
     h2 {
       font-size: 1.8rem;
     }
@@ -24,18 +24,45 @@
     }
   }
   
-  // Make that header image even moooar taller Chuck
-  .index__header {
-    height: 35%;
+  // Trying to do something with that awful black footer.. ew..
+  .post__footer {
+    padding-bottom: 4em;
+  }
+  .post__footer__inner {
+    background-color: transparent;
+    border-top: 1px solid $lightgrey;
+    padding-top: 2.5%;
+    
+    h4 {
+      color: $grey;
+      margin-bottom: -.5em;
+    }
+    
+    // Now I messed up the link text in the footer.. its not consistent.. I'm so bad at this
+    .footer {
+      
+      #footer__wrap {
+      
+        a, span {
+          color: rgba($grey, .7);
+        }
+        a {
+          border-bottom: 1px solid $lightgrey;
+          &:hover, &:active, &:focus {
+            color: $blue;
+          }
+        }
+      }
+    }
   }
   
-  // Add some moar padding to the bottom
+  // The protective shield of padding from the sticky footer
   .post__content {
-    padding-bottom: 6%;
+    padding-bottom: 184px;
   }
 }
 
-//Media Queries - 600px
+// This one is for iPads and tablets 
 @media only screen 
 and (max-width : 799px)
 and (min-width : 569px) {
@@ -56,28 +83,23 @@ and (min-width : 569px) {
   }
   
   // The links on the index page
-    .index__link {
-    
-      h2 {
-        font-size: 1.4rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
+  .index__link {
   
-  // Make that header image taller Chuck
-  .index__header {
-    height: 28%;
+    h2 {
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
   
-  // Add some moar padding to the bottom
+  // Keep away you evil sticky footer!
   .post__content {
-    padding-bottom: 4%;
+    padding-bottom: 153px;
   }
 }
 
-// 500px
+// For like phones and stuff
 @media only screen and (max-width: 568px) {
   .page-number {
     @include hide;
@@ -94,7 +116,6 @@ and (min-width : 569px) {
       padding: 4%;
       box-sizing: border-box;
       &:hover, &:active, &:focus {
-        background-color: $pure;
         color: inherit;
       }
     }
@@ -106,9 +127,13 @@ and (min-width : 569px) {
     }
   }
   
+  // Heaven save us from the sticky footer!!
+  .post__content {
+    padding-bottom: 98px;
+  }
+  
   // Fancy phone footer scroll
-  .post__share {
-    width: 120%;
-    max-width: 524px;
+  .post__footer__inner {
+    min-width: 395px;
   }
 }
