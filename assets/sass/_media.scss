@@ -13,7 +13,7 @@
     font-size: 1.65rem;
   }
   
-  // The links on the index page
+  // The post links on the index page
   .index__link {
     
     h2 {
@@ -27,11 +27,12 @@
   // Trying to do something with that awful black footer.. ew..
   .post__footer {
     padding-bottom: 4em;
+    border-top: 1px solid $lightgrey;
   }
+  
   .post__footer__inner {
     background-color: transparent;
-    border-top: 1px solid $lightgrey;
-    padding-top: 2.5%;
+    @include max-width;
     
     h4 {
       color: $grey;
@@ -41,7 +42,7 @@
     // Now I messed up the link text in the footer.. its not consistent.. I'm so bad at this
     .footer {
       
-      #footer__wrap {
+      .footer__wrap {
       
         a, span {
           color: rgba($grey, .7);
@@ -58,7 +59,35 @@
   
   // The protective shield of padding from the sticky footer
   .post__content {
-    padding-bottom: 184px;
+    padding-top: 1em;
+    padding-bottom: 250px;
+  }
+  
+  // Footer rss icon changes
+  .post__rss {
+    margin-bottom: 165px;
+    margin-right: -20px;
+
+    .subscribe {
+      width: 40px;
+      height: 40px;
+      border: $lightgrey 1px solid;
+    }
+    .subscribe:before {
+      font-size: 21px;
+      top: 11px;
+      left: 12px;
+    }
+    .tooltip {
+      right: -74px;
+      width: 200px;
+    }
+    .tooltip:before {
+      content: "Subscribe via RSS";
+    }
+    .tooltip:after {
+      right: 90px;
+    }
   }
 }
 
@@ -95,7 +124,32 @@ and (min-width : 569px) {
   
   // Keep away you evil sticky footer!
   .post__content {
-    padding-bottom: 153px;
+    padding-top: .25em;
+    padding-bottom: 160px;
+  }
+  
+  // Footer rss icon changes
+  .post__rss {
+    margin-bottom: 95px;
+    margin-right: -17px;
+    
+    .subscribe {
+      width: 35px;
+      height: 35px;
+    }
+    .subscribe:before {
+      top: 9px;
+      left: 9px;
+    }
+    .subscribe:hover {
+      box-shadow: 0 0 0 3px $white;
+    }
+    .tooltip {
+      right: -36px;
+    }
+    .tooltip:after {
+      right: 50px;
+    }
   }
 }
 
@@ -114,7 +168,7 @@ and (min-width : 569px) {
       margin: 0 -2px;
       width: 50%;
       padding: 4%;
-      box-sizing: border-box;
+      @include border-box;
       &:hover, &:active, &:focus {
         color: inherit;
       }
@@ -127,13 +181,49 @@ and (min-width : 569px) {
     }
   }
   
+  // Lessen that padding on the top son.. its too much!
+  .post-template {
+    padding-top: 3%; 
+  }
+  
   // Heaven save us from the sticky footer!!
   .post__content {
-    padding-bottom: 98px;
+    padding-bottom: 118px;
+    
+  }
+  
+  // Footer rss icon changes
+  .post__rss {
+    margin-bottom: 86px;
+    margin-right: -14px;
+    
+    .subscribe:hover {
+      box-shadow: 0 0 0 3px $white;
+    }
+    .tooltip {
+      right: -40px;
+      font-size: 1em;
+    }
+    .tooltip:after {
+      right: 50px;
+    }
   }
   
   // Fancy phone footer scroll
+  .post__footer {
+    position: absolute;
+    bottom: 0;
+    overflow: auto;
+    @include grow;
+  }
   .post__footer__inner {
     min-width: 395px;
   }
+}
+
+/* iPhone in landscape mode.. it bugged me alright ----------- */
+@media only screen and (height: 320px) {
+    .index__header {
+      padding: 4% 0;
+    }
 }

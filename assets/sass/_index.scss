@@ -7,11 +7,9 @@
 .index__header {
   background: $blue no-repeat center bottom;
   background-size: cover;
-  image-rendering: optimizeSpeed;
   text-align: center;
   display: table;
   width: 100%;
-  
   padding: 8% 0;
   
   #index__meta {
@@ -80,7 +78,7 @@
 }
 
 // Footer stuffs
-.footer {
+.footer__meta {
   text-align: center;
   height: 6em;
   position: absolute;
@@ -88,7 +86,7 @@
   display: table;
   width: 100%;
   
-  #footer__wrap {
+  .footer__wrap {
     display: table-cell;
     vertical-align: middle;
   
@@ -106,4 +104,83 @@
       display: block;
     }
   }
+}
+
+// Position the rss icon
+.index__rss {
+  position: absolute;
+  margin-top: -14px;
+  top: 0;
+  right: 4%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+// The rss circle
+.subscribe {
+  width: 28px;
+  height: 28px;
+  float: left;
+  border: $lightgrey 1px solid;
+  border-radius: 50%;
+  background: $white;
+  transition: box-shadow 0.5s;
+}
+
+// The rss icon, inserted via icon font
+.subscribe:before {
+  font-size: 17px;
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  color: rgba($grey, .5);
+}
+
+// Add a box shadow to on hover
+.subscribe:hover {
+  box-shadow: 0 0 0 3px $lightgrey;
+  background-color: $pure;
+  transition: box-shadow 0.25s;
+}
+.subscribe:hover:before {
+  color: $blue;
+}
+
+// CSS tooltip message. Gotta give some into dontcha know
+.tooltip {
+  position: absolute;
+  background: $grey;
+  white-space: nowrap;
+  color: $white;
+  border-radius: 1.2rem;
+  right: -6px;
+  width: 100px;
+  font-size: 1rem;    
+  font-weight: 400;
+  transition: all 0.25s;
+  top: -3.2em;
+  z-index: -999;
+  text-align: center;
+  opacity: 0;
+}
+.tooltip:before {
+  content: "Subscribe";
+}
+
+// The little downward chiclet arrow under the tooltip. Chiclet.. ha.. cute
+.tooltip:after {
+  content: "";
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: $grey transparent;
+  position: absolute;
+  bottom: -5px;
+  right: 17px;
+}
+
+// On hover, show the tooltip!
+.subscribe:hover .tooltip {
+  z-index: 999;
+  top: -2.2em;
+  opacity: 1;
 }

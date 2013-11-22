@@ -6,11 +6,20 @@
 }
 
 // Grow beyond the limits to reach max width!
-// I have a 4% padding on the post.hbs page but I want some stuff
-// To be full width so this takes care of that
+// I have a 4% padding on the post.hbs page
+// I want some stuff To be full width so this takes care of that
 @mixin grow {
   width: 109%;
   margin-left: -4.5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// basic border box
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 

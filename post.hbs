@@ -1,18 +1,20 @@
 {{!< default}}
 
 <main class="post__main" role="main">
-  <a class="post__header" href="{{@blog.url}}">
-    {{@blog.title}}
-  </a>
-  
   {{#post}}
     <article class="{{post_class}}">
       <div class="post__meta">
+        <a class="post__header" href="{{@blog.url}}">
+          {{@blog.title}}
+        </a>
+        <br />
         <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> 
         {{#if tags}}in {{tags separator=" | "}}{{/if}}
       </div>
       
-      <h1 class="post__title" {{#if author}}style="background-image: url({{author.cover}})"{{/if}}>{{{title}}}</h1>
+      <div class="post__title" class="post__title" {{#if author.cover}}style="background-image: url({{author.cover}}); background-color: #626667;"{{/if}}>
+        <h1>{{{title}}}</h1>
+      </div>
       
       <section class="post__content">
         {{content}}
@@ -31,6 +33,10 @@
           {{> footer this }}
         </section>
       </div>
+      
+      <span class="post__rss">
+        {{> rss this }}
+      </span>
     </article>
   {{/post}}
 </main>

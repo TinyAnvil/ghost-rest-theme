@@ -2,19 +2,23 @@
 
 @import url(//fonts.googleapis.com/css?family=Lustria|Inconsolata|Open+Sans:400,300,600,700);
 
+
+@charset "UTF-8";
+
 @font-face {
-  font-family: "ghost";
-  src:url("../fonts/ghost.eot");
-  src:url("../fonts/ghost.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/ghost.ttf") format("truetype"),
-    url("../fonts/ghost.svg#ghost") format("svg"),
-    url("../fonts/ghost.woff") format("woff");
+  font-family: "rest-theme";
+  src:url("../fonts/rest-theme.eot");
+  src:url("../fonts/rest-theme.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/rest-theme.ttf") format("truetype"),
+    url("../fonts/rest-theme.svg#rest-theme") format("svg"),
+    url("../fonts/rest-theme.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
-  font-family: "ghost" !important;
+  font-family: "rest-theme" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -28,7 +32,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "ghost" !important;
+  font-family: "rest-theme" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -40,83 +44,7 @@
 }
 
 
-.icon-github:before {
-  content: "c";
-}
-
-.icon-facebook:before {
-  content: "e";
-}
-
-.icon-dribble:before {
-  content: "f";
-}
-
-.icon-site:before {
-  content: "g";
-}
-
-.icon-link:before {
-  content: "i";
-}
-
-.icon-flickr:before {
-  content: "j";
-}
-
-.icon-google:before {
-  content: "k";
-}
-
-.icon-tumblr-1:before {
-  content: "m";
-}
-
-.icon-list:before {
-  content: "n";
-}
-
-.icon-search:before {
+.icon-rss:before {
   content: "r";
-}
-
-.icon-medium:before {
-  content: "s";
-}
-
-.icon-lrg-skinny-left:before {
-  content: "t";
-}
-
-.icon-skinny-left:before {
-  content: "u";
-}
-
-.icon-lrg-left-arrow:before {
-  content: "v";
-}
-
-.icon-twitter:before {
-  content: "w";
-}
-
-.icon-tumblr:before {
-  content: "x";
-}
-
-.icon-pinterest:before {
-  content: "A";
-}
-
-.icon-instagram:before {
-  content: "C";
-}
-
-.icon-github-round:before {
-  content: "a";
-}
-
-.icon-google-sqr:before {
-  content: "b";
 }
 

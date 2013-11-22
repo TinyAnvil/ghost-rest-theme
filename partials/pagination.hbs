@@ -1,4 +1,8 @@
 <nav class="pagination" role="pagination">
+  <div class="index__rss">
+    {{> rss this }}
+  </div>
+  
   {{#if prev}}
     <a class="newer-posts" href="{{pageUrl prev}}">← Newer</a>
   {{/if}}

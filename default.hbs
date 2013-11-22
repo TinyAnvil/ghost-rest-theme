@@ -22,13 +22,20 @@
   <link href="//fonts.googleapis.com/" rel="dns-prefetch">
   <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+  <!--[if lt IE 7]>
+  	<style media="screen" type="text/css">
+  	#master__container {
+  		height:100%;
+  	}
+  	</style>
+  <![endif]-->
 
   {{! Responsive Meta Tags }}
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
-
+  
   {{! Ghost outputs important style and meta data with this tag }}
   {{ghost_head}}
 </head>
@@ -38,6 +45,7 @@
     {{{body}}}
   </div>
   
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   {{ghost_foot}}
 </body>
 </html>

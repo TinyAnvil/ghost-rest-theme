@@ -11,7 +11,7 @@ body {
   background-color: $white;
   line-height: 1.6;
   overflow-x: hidden;
-  box-sizing: border-box;
+  @include border-box;
   text-rendering: optimizeLegibility;
 }
 
@@ -43,7 +43,6 @@ p a {
 }
 img {
   width: 100%;
-  image-rendering: crisp-edges;
 }
 ul, ol {
   padding-left: 20px;
@@ -91,7 +90,7 @@ pre {
   overflow: auto;
   background: rgba($grey, .05);
   border-radius: 3px;
-  box-sizing: border-box;
+  @include border-box;
 }
 code, tt {
   padding: 1px 3px;

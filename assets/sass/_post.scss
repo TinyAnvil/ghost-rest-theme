@@ -2,16 +2,16 @@
 .post-template {
   padding: 4%;
   padding-bottom: 0;
+}
+
+// Wrapper for the blog name, post title and date
+.post__meta {
   @include max-width;
 }
 
-// The post wrapper.. but this one has everything.. including the footer
-.post__main {
-  
-}
-
-// The blog name wrapper
+// The blog name and post date wrapper
 .post__header {
+  display: inline-block;
   border-bottom: 1px solid $lightgrey;
   &:hover, &:active, &:focus {
       color: $blue;
@@ -20,20 +20,24 @@
 
 // The post title.. duh
 .post__title {
-  background: $red no-repeat center bottom;
+  background: $red no-repeat center center;
   background-size: cover;
-  image-rendering: optimizeSpeed;
-  font-weight: 100;
-  line-height: 1.2em;
   margin: .5em 0;
-  color: $pure;
-  @include grow;
   padding: 4.5%;
-  text-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  @include grow;
+  
+  h1 {
+    font-weight: 100;
+    line-height: 1.2em;
+    color: $pure;
+    text-shadow: 0px 1px 2px rgba(0,0,0,.2);
+    @include max-width
+  }
 }
 
 // Mhmm.. yup.. the post content
 .post__content {
+  @include max-width;
   
   h2, h3, h4, h5, h6 {
     margin-top: 2rem;
@@ -47,15 +51,41 @@
   }
 }
 
+// RSS icon changes
+.post__rss {
+  position: absolute;
+  margin-bottom: 84px;
+  margin-right: -14px;
+  bottom: 0;
+  right: 50%;
+  z-index: 999;
+  
+  .subscribe {
+    border: none;
+    background-color: $white;
+  }
+  .tooltip {
+    right: -40px;
+    width: 110px;
+    font-size: 1.2rem;
+    opacity: 0;
+  }
+  .subscribe:hover .tooltip {
+    z-index: 999;
+    top: -2.2em;
+    opacity: 1;
+  }
+}
+
 // Wanna share a post? Well..to bad!! This is just to style da links.
 .post__footer {
   position: absolute;
   bottom: 0;
-  overflow: auto;
   @include grow;
 }
   
 .post__footer__inner {
+  position: relative;
   padding: 1.5rem 4.5%;
   background-color: $black;
   
@@ -67,20 +97,17 @@
     color: $blue;
   }
   
-  // Footer stuffs
-  .footer {
+  // Footer meta stuffs
+  .footer__meta {
     text-align: right;
     float: right;
     margin-top: -1.9em;
-    padding: 0;
-    
     width: auto;
     height: auto;
     position: relative;
     display: inline-block;
     
-    #footer__wrap {
-      display: inherit;
+    .footer__wrap {
       
       a, span {
         font-size: .75rem;
