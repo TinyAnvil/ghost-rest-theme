@@ -1,7 +1,7 @@
 // Big screens, for old fogies
 @media only screen and (min-width: 800px) {
   p, li, code, a, .page-number {
-    font-size: 1.35rem;
+    font-size: 1.30rem;
   }
   h1 {
     font-size: 3rem;
@@ -9,12 +9,16 @@
   h2, blockquote p {
     font-size: 2rem;
   }
-  h3, h4 {
+  h3, h4, .post__blog__title {
     font-size: 1.65rem;
   }
   
   // The post links on the index page
   .index__link {
+    background-color: transparent !important;
+    &:hover h2 {
+      color: $blue;
+    }
     
     h2 {
       font-size: 1.8rem;
@@ -23,7 +27,7 @@
       font-size: 1.2rem;
     }
   }
-  
+    
   // Trying to do something with that awful black footer.. ew..
   .post__footer {
     padding-bottom: 4em;
@@ -112,7 +116,7 @@ and (min-width : 569px) {
   blockquote p {
     font-size: 1.6rem;
   }
-  h3, h4 {
+  h3, h4, .post__blog__title {
     font-size: 1.4rem;
   }
   
@@ -162,6 +166,10 @@ and (min-width : 569px) {
 
 // For like phones and stuff
 @media only screen and (max-width: 568px) {
+  .post__blog__title {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
   .page-number {
     @include hide;
   }
@@ -215,6 +223,9 @@ and (min-width : 569px) {
       top: 7px;
     }
   }
+  .tooltip {
+    display: none !important;
+  }
   
   // Fancy phone footer scroll
   .post__footer {
@@ -229,7 +240,7 @@ and (min-width : 569px) {
 }
 
 /* iPhone in landscape mode.. it bugged me alright ----------- */
-@media only screen and (height: 320px) {
+@media only screen and (max-height: 350px) {
     .index__header {
       padding: 4% 0;
     }
