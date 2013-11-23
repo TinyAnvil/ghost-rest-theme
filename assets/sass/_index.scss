@@ -39,7 +39,7 @@
   @include max-width;
   padding: 4%;
   border-bottom: 1px solid $lightgrey;
-  &:hover, &:active, &:focus {
+  &:hover {
       background-color: $pure;
   }
 
@@ -65,7 +65,7 @@
   
   .older-posts, .newer-posts {
     position: absolute;
-    &:hover, &:active, &:focus {
+    &:hover {
       color: $blue;
     }
   }
@@ -102,7 +102,7 @@
     }
     a {
       border-bottom: 1px solid $lightgrey;
-      &:hover, &:active, &:focus {
+      &:hover {
         color: $blue;
       }
     }

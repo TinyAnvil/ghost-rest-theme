@@ -53,7 +53,7 @@
         }
         a {
           border-bottom: 1px solid $lightgrey;
-          &:hover, &:active, &:focus {
+          &:hover {
             color: $blue;
           }
         }
@@ -184,7 +184,7 @@ and (min-width : 569px) {
       width: 50%;
       padding: 4%;
       @include border-box;
-      &:hover, &:active, &:focus {
+      &:hover {
         color: inherit;
       }
     }
@@ -204,7 +204,6 @@ and (min-width : 569px) {
   // Heaven save us from the sticky footer!!
   .post__content {
     padding-bottom: 118px;
-    
   }
   
   // Footer rss icon changes
@@ -229,10 +228,7 @@ and (min-width : 569px) {
   
   // Fancy phone footer scroll
   .post__footer {
-    position: absolute;
-    bottom: 0;
     overflow: auto;
-    @include grow;
   }
   .post__footer__inner {
     min-width: 395px;

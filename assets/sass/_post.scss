@@ -2,7 +2,6 @@
 .post-template {
   padding: 4%;
   padding-bottom: 0;
-  background-color: $white;
 }
 
 // Wrapper for the blog name, post title and date
@@ -14,13 +13,17 @@
 .post__header {
   display: inline-block;
   border-bottom: 1px solid $lightgrey;
-  &:hover, &:active, &:focus {
+  &:hover {
       color: $blue;
   }
 }
 .post__blog__title {
   font-weight: 600;
   line-height: 1.4;
+  
+  &:hover {
+    color: $blue;
+  }
 }
 
 // The post title.. duh
@@ -94,7 +97,6 @@
   bottom: 0;
   @include grow;
 }
-  
 .post__footer__inner {
   position: relative;
   padding: 1.5rem 4.5%;
@@ -126,7 +128,7 @@
       }
       a {
         border-bottom: 1px solid rgba($lightgrey, .8);
-        &:hover, &:active, &:focus {
+        &:hover {
           color: $blue;
         }
       }
