@@ -2,6 +2,7 @@
 .post-template {
   padding: 4%;
   padding-bottom: 0;
+  background-color: $white;
 }
 
 // Wrapper for the blog name, post title and date
@@ -58,22 +59,28 @@
   margin-right: -14px;
   bottom: 0;
   right: 50%;
-  z-index: 999;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   
   .subscribe {
     border: none;
-    background-color: $white;
   }
-  .tooltip {
-    right: -40px;
-    width: 110px;
-    font-size: 1.2rem;
-    opacity: 0;
+  .subscribe:before {
+    color: $black;
+  }
+  .subscribe:hover:before {
+    color: $blue;
   }
   .subscribe:hover .tooltip {
-    z-index: 999;
-    top: -2.2em;
+    top: -1.9em;
     opacity: 1;
+  }
+  .tooltip {
+    right: -34px;
+    font-size: 1rem;
+  }
+  .tooltip:after {
+    right: 44px;
   }
 }
 

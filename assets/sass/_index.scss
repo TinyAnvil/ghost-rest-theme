@@ -124,7 +124,7 @@
   border: $lightgrey 1px solid;
   border-radius: 50%;
   background: $white;
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.25s;
 }
 
 // The rss icon, inserted via icon font
@@ -139,8 +139,6 @@
 // Add a box shadow to on hover
 .subscribe:hover {
   box-shadow: 0 0 0 3px $lightgrey;
-  background-color: $pure;
-  transition: box-shadow 0.25s;
 }
 .subscribe:hover:before {
   color: $blue;
@@ -157,10 +155,8 @@
   width: 100px;
   font-size: 1rem;    
   font-weight: 400;
-  transition: all 0.25s;
-  top: -3.2em;
-  z-index: -999;
   text-align: center;
+  transition: all 0.25s;
   opacity: 0;
 }
 .tooltip:before {
@@ -174,13 +170,12 @@
   border-style: solid;
   border-color: $grey transparent;
   position: absolute;
-  bottom: -5px;
-  right: 17px;
+  bottom: -4px;
+  right: 16px;
 }
 
 // On hover, show the tooltip!
 .subscribe:hover .tooltip {
-  z-index: 999;
   top: -2.2em;
   opacity: 1;
 }
