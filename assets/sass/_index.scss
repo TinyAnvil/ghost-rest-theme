@@ -53,6 +53,9 @@
     font-size: .75rem;
     color: rgba($grey, .7);
   }
+  .default, .medium, .long {
+    @include hide;
+  }
 }
 
 // Pagination. Media changes in universal.scss
@@ -164,7 +167,7 @@
   text-align: center;
   transition: all 0.1s;
   top: -2.2em;
-  opacity: 0;
+  visibility: hidden;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   transform: scale(0);
@@ -186,7 +189,7 @@
 
 // On hover, show the tooltip!
 .subscribe:hover .tooltip {
-  opacity: 1;
+  visibility: visible;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   transform: scale(1);

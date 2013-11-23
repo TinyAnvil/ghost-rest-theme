@@ -29,3 +29,10 @@
 		visibility: hidden;
 		display: none;
 }
+
+// Shows all the things
+@mixin show {
+  text-indent: inherit;
+  visibility: inherit;
+  display: inherit;
+}

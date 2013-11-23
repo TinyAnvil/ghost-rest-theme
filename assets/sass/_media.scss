@@ -26,6 +26,9 @@
     p {
       font-size: 1.2rem;
     }
+    .long {
+      @include show;
+    }
   }
     
   // Trying to do something with that awful black footer.. ew..
@@ -129,6 +132,9 @@ and (min-width : 569px) {
     p {
       font-size: 1rem;
     }
+    .medium {
+      @include show;
+    }
   }
   
   // Keep away you evil sticky footer!
@@ -170,6 +176,16 @@ and (min-width : 569px) {
     font-size: 1rem;
     line-height: 1.45;
   }
+  
+  // Showing the shortest text
+  .index__link {
+  
+    .default {
+      @include show;
+    }
+  }
+  
+  // Pagination changes
   .page-number {
     @include hide;
   }
@@ -235,9 +251,9 @@ and (min-width : 569px) {
   }
 }
 
-/* iPhone in landscape mode.. it bugged me alright ----------- */
+// iPhone in landscape mode.. it bugged me alright
 @media only screen and (max-height: 350px) {
-    .index__header {
-      padding: 4% 0;
-    }
+  .index__header {
+    padding: 4% 0;
+  }
 }

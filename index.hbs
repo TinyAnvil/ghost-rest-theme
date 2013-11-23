@@ -11,7 +11,9 @@
   <article class="{{post_class}}">
     <a class="index__link" href="{{url}}">
       <h2>{{{title}}}</h2>
-      <p>{{excerpt words="25"}}&hellip;</p>
+      <p class="default">{{excerpt words="25"}}&hellip;</p>
+      <p class="medium">{{excerpt words="50"}}&hellip;</p>
+      <p class="long">{{excerpt words="100"}}&hellip;</p>
     </a>
   </article>
   {{/foreach}}
