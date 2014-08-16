@@ -5,19 +5,20 @@
 
 // The index header
 .index__header {
-  background: $blue no-repeat center bottom;
+  background: $blue no-repeat center;
   background-size: cover;
   text-align: center;
   display: table;
   width: 100%;
   padding: 8% 0;
+  cursor: default;
   
   #index__meta {
     display: table-cell;
     vertical-align: middle;
     
     h1 {
-      font-weight: 100;
+      font-weight: 700;
       color: $pure;
       text-shadow: 0px 1px 2px rgba(0,0,0,.2);
       line-height: 1;
@@ -40,7 +41,7 @@
   padding: 4%;
   border-bottom: 1px solid $lightgrey;
   &:hover {
-      background-color: $pure;
+    background-color: $pure;
   }
 
   h2 {
@@ -65,12 +66,14 @@
   text-align: center;
   padding: 4%;
   border-bottom: 1px solid $lightgrey;
+  -webkit-font-smoothing: subpixel-antialiased;
   
   .older-posts, .newer-posts {
     position: absolute;
     &:hover {
       color: $blue;
     }
+    
   }
   .older-posts {
     right: 4%;
@@ -94,6 +97,7 @@
   bottom: 0;
   display: table;
   width: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
   
   .footer__wrap {
     display: table-cell;
@@ -118,11 +122,9 @@
 // Position the rss icon
 .index__rss {
   position: absolute;
-  margin-top: -14px;
+  margin-top: -15px;
   top: 0;
   right: 4%;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
 // The rss circle
@@ -133,7 +135,7 @@
   border: $lightgrey 1px solid;
   border-radius: 50%;
   background: $white;
-  transition: box-shadow 0.25s;
+  transition: box-shadow 0.1s;
 }
 
 // The rss icon, inserted via icon font
@@ -167,7 +169,7 @@
   text-align: center;
   transition: all 0.1s;
   top: -2.2em;
-  visibility: hidden;
+  opacity: 0;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   transform: scale(0);
@@ -189,7 +191,7 @@
 
 // On hover, show the tooltip!
 .subscribe:hover .tooltip {
-  visibility: visible;
+  opacity: 1;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   transform: scale(1);

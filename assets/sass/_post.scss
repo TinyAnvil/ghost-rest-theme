@@ -18,7 +18,7 @@
   }
 }
 .post__blog__title {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4;
   
   &:hover {
@@ -47,23 +47,22 @@
 .post__content {
   @include max-width;
   
-  h2, h3, h4, h5, h6 {
-    margin-top: 2rem;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-top: 1.2em;
     margin-bottom: -.5rem;
   }
   img {
     @include grow;
   }
   a, em, strong, li, mark {
-    font-family: 'Lustria', serif;
+    @include paragraph;
   }
 }
 
 // RSS icon changes
 .post__rss {
   position: absolute;
-  margin-bottom: 84px;
-  margin-right: -14px;
   bottom: 0;
   right: 50%;
   transform-style: preserve-3d;
@@ -105,6 +104,7 @@
   h4 {
     color: $white;
     display: inline-block;
+    line-height: 1;
   }
   a {
     color: $blue;
@@ -119,6 +119,7 @@
     height: auto;
     position: relative;
     display: inline-block;
+    -webkit-font-smoothing: subpixel-antialiased;
     
     .footer__wrap {
       

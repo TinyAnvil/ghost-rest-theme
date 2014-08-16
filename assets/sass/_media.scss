@@ -1,10 +1,13 @@
 // Big screens, for old fogies
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 870px) {
   p, li, code, a, .page-number {
     font-size: 1.30rem;
   }
   h1 {
     font-size: 3rem;
+  }
+  blockquote {
+    border-left: 12px solid $lightgrey;
   }
   h2, blockquote p {
     font-size: 2rem;
@@ -72,18 +75,18 @@
   
   // Footer rss icon changes
   .post__rss {
-    margin-bottom: 164px;
     margin-right: -20px;
-
+    margin-bottom: 155px;
+    
     .subscribe {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border: $lightgrey 1px solid;
     }
     .subscribe:before {
-      font-size: 21px;
-      top: 11px;
-      left: 12px;
+      font-size: 20px;
+      top: 10px;
+      left: 11px;
       color: rgba($grey, .5);
     }
     .subscribe:hover .tooltip {
@@ -105,7 +108,7 @@
 
 // This one is for iPads and tablets 
 @media only screen 
-and (max-width : 799px)
+and (max-width : 869px)
 and (min-width : 569px) {
   p, li, code, a, .page-number {
     font-size: 1.2rem;
@@ -116,11 +119,15 @@ and (min-width : 569px) {
   h2 {
     font-size: 1.8rem;
   }
-  blockquote p {
-    font-size: 1.6rem;
+  blockquote {
+    border-left: 6px solid $lightgrey;
+    
+    p {
+      font-size: 1.6em;
+    }
   }
   h3, h4, .post__blog__title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
   
   // The links on the index page
@@ -145,7 +152,7 @@ and (min-width : 569px) {
   
   // Footer rss icon changes
   .post__rss {
-    margin-bottom: 96px;
+    margin-bottom: 90px;
     margin-right: -17px;
     
     .subscribe {
@@ -172,6 +179,14 @@ and (min-width : 569px) {
 
 // For like phones and stuff
 @media only screen and (max-width: 568px) {
+  .index__header {
+    #index__meta {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  
   .post__blog__title {
     font-size: 1rem;
     line-height: 1.45;
@@ -220,6 +235,10 @@ and (min-width : 569px) {
   // Heaven save us from the sticky footer!!
   .post__content {
     padding-bottom: 118px;
+    
+    p, li, code, a {
+      font-size: .95rem;
+    }
   }
   
   // Footer rss icon changes
@@ -248,6 +267,10 @@ and (min-width : 569px) {
   }
   .post__footer__inner {
     min-width: 395px;
+    
+    h4 {
+      font-size: 1.25rem;
+    }
   }
 }
 

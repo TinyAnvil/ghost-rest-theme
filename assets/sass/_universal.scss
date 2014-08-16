@@ -36,16 +36,20 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 p {
-  font-family: 'Lustria', serif;
+  @include paragraph;
 }
 p a {
   color: $blue;
 }
-img {
+img, iframe {
   width: 100%;
 }
-ul, ol {
-  padding-left: 20px;
+iframe {
+  margin: 1em 0;
+}
+ol, ul {
+  padding-left: 11px;
+  margin-left: 4%;
 }
 ol ol, ul ul,
 ul ol, ol ul {
@@ -54,8 +58,7 @@ ul ol, ol ul {
 blockquote {
   border-left: 3px solid $lightgrey;
   margin: 0;
-  margin-left: 2%;
-  padding-left: 2%;
+  padding-left: 4%;
   
   p {
     font-size: 1.2rem;
@@ -73,7 +76,7 @@ mark {
 
 // Code stuff
 pre, code, tt {
-  font-family: 'Inconsolata', monospace, sans-serif;
+  font-family: 'Source Code Pro', monospace, sans-serif;
 }
 pre code {
   white-space: -moz-pre-wrap;
@@ -94,7 +97,6 @@ pre {
 }
 code, tt {
   padding: 1px 3px;
-  white-space: pre;
   border: 1px solid $lightgrey;
   background: rgba($grey, .05);
   border-radius: 2px;
